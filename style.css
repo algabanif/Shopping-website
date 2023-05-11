@@ -89,6 +89,43 @@ body{
 
 /* End Header style */
 
+/* category */
+.category ul{
+    list-style: none;
+    background:  #caaa80bd;
+}
+
+.category ul li{
+    display: inline-block;
+    position: relative;
+}
+
+.category ul li a {
+    display: block;
+    padding: 20px 25px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+.category ul li ul.dropdown li{
+    display: block;
+}
+
+.category ul li ul.dropdown {
+    width: 100%;
+    background: rgb(230, 189, 151);
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+.category ul li:hover ul.dropdown{
+    display: block;
+}
+/* End category */
 
 h1{
     color: white;
