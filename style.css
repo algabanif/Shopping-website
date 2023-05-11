@@ -120,6 +120,8 @@ body{
     position: absolute;
     z-index: 999;
     display: none;
+    text-align: center;
+    padding-bottom: 1rem;
 }
 
 .category ul li:hover ul.dropdown{
