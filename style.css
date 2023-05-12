@@ -8,9 +8,16 @@
 
 body{
     font-family: 'Poppins', sans-serif;
+<<<<<<< Updated upstream
     background-color: rgb(253, 225, 193);
     color: rgb(255, 255, 255);
     overflow: hidden;
+=======
+    background-color: #F6F8FA;
+    height: 1000px;
+    overflow:scroll;
+    scroll-behavior: smooth;
+>>>>>>> Stashed changes
 }
 
 
@@ -136,3 +143,260 @@ h1{
 
 
 
+<<<<<<< Updated upstream
+=======
+
+
+
+
+/* Footer */
+.footer {
+    background-color: #24262b;
+    padding: 70px 0;
+}
+
+.footer-container {
+    max-width: 1170px;
+    margin: auto;
+}
+.footer-row{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer ul{
+    list-style: none;
+}
+
+.footer-col h4{
+    font-size: 18px;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before{
+    content : '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #074497;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+
+}
+
+.footer-col ul li a:hover{
+    color: #fff;
+    padding-left: 10px;
+}
+
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(255, 255, 255, 0.2);
+    margin-right: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 1s ease;
+
+}
+
+.footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #fff;
+}
+
+
+
+/*fix size*/
+@media(max-width: 767px){
+
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+
+}
+
+@media(max-width: 574px){
+
+    .footer-col{
+        width: 100%;
+    }
+
+}
+/*Trending Product section */
+.trending-section-title{
+    margin-bottom: 20px;
+}
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0px 300px;
+    position: relative;
+    z-index: 5;
+    position: relative;
+  }
+  .section-title h2 {
+    font-size: 30px;
+    line-height: 35px;
+    text-transform: capitalize;
+    position: relative;
+    font-weight: 800;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .section-title h2::before {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    content: "";
+    background-color: #0167F3;
+    height: 2px;
+    width: 50px;
+    margin-left: -25px;
+    border-radius: 2px;
+  }
+  .section-title p {
+    font-size: 14px;
+  }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .section-title {
+      padding: 0px 250px;
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .section-title {
+      padding: 0px 20px;
+      margin-bottom: 30px;
+    }
+}
+.single-product {
+    border: 1px solid #eee;
+    border-radius: 4px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    margin-top: 30px;
+    -webkit-box-shadow: 0px 0px 20px #00000012;
+    box-shadow: 0px 0px 20px #00000012;
+    padding: 8px;
+    background: #fff;
+  }
+  .single-product .product-image {
+    overflow: hidden;
+    position: relative;
+  }
+  .single-product .product-image .button-product{
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: -60px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    opacity: 0;
+    visibility: hidden;
+    color: #fafafa;
+  }
+  .single-product .product-image .button-product .btn {
+    padding: 12px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    width: 140px;
+    color: #000000;
+  }
+  .single-product .product-image .button-product .btn i {
+    font-size: 18px;
+      position: relative;
+      top: 2px;
+      color: #000000;
+  }
+  .single-product .product-image img {
+    width: 100%;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  .single-product:hover .product-image .button-product {
+    bottom: 30px;
+    opacity: 1;
+    visibility: visible;
+  }
+  .single-product:hover .product-image img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  .single-product .product-info {
+    padding: 20px;
+    background-color: #fff;
+  }
+  .single-product .product-info .category {
+    color: #888;
+    font-size: 13px;
+    display: block;
+    margin-bottom: 2px;
+  }
+  .single-product .product-info .title a {
+    font-size: 16px;
+    font-weight: 700;
+    color: #081828;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 991px),
+(max-width: 767px) {
+  .single-product .product-info .title a {
+    font-size: 15px;
+  }
+}
+.single-product .product-info .title a:hover {
+    color: #0167F3;
+  }
+  .single-product .product-info .price span {
+    font-size: 17px;
+    font-weight: 700;
+    color: #0167F3;
+    display: inline-block;
+  }
+  .single-product .product-info .price {
+    margin-top: 15px;
+  }
+ 
+  .single-product .product-info .title-info a {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000000;
+    text-decoration: none;
+  }
+  .single-product .product-image .button-product .btn i {
+    font-size: 18px;
+      position: relative;
+      top: 2px;
+  }
+>>>>>>> Stashed changes
