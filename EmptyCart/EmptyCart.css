@@ -1,20 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Wix+Madefor+Display:wght@500&display=swap');
-* {
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
-body {
+body{
     font-family: 'Poppins', sans-serif;
     height: 1000px;
-    overflow: scroll;
+    overflow:scroll;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Header style */
-
-.container-bar {
+.container-bar{
     width: 100%;
     margin: 0 auto;
 }
@@ -28,19 +40,19 @@ body {
     z-index: 10;
 }
 
-.header .container-bar {
+.header .container-bar{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.search-bar {
+.search-bar{
     background-color: hsl(252, 30%, 95%);
     border-radius: 2rem;
     padding: 0.6rem 1rem;
 }
 
-.search-bar input[type="search"] {
+.search-bar input[type="search"]{
     background: transparent;
     border: 0;
     width: 30vw;
@@ -55,7 +67,7 @@ body {
     gap: 2rem;
 }
 
-.btn-cart {
+.btn{
     display: inline-block;
     padding: 0.6rem 2rem;
     font-weight: 500;
@@ -64,40 +76,39 @@ body {
     color: white;
     background-color: hsla(239, 27%, 62%, 0.63);
     transition: all 300ms ease;
+
 }
 
-.btn:hover {
+.btn:hover{
     opacity: 0.8;
 }
 
-.link {
-    color: hsl(0, 0%, 100%);
+.link{
+    color:  hsl(0, 0%, 100%);
     cursor: pointer;
 }
 
-.link:hover {
+.link:hover{
     text-decoration: underline;
 }
 
-.header a {
-    text-decoration: none;
+.header a { 
+    text-decoration: none; 
     padding-top: 0.7rem;
     color: white;
 }
-
-
 /* End Header style */
 
 
-/* category */
 
-.category ul {
+/* category */
+.category ul{
     padding-top: 80px;
     list-style: none;
-    background: #24262b;
+    background:  #24262b;
 }
 
-.category ul li {
+.category ul li{
     display: inline-block;
     position: relative;
 }
@@ -111,7 +122,8 @@ body {
     font-size: 20px;
 }
 
-.category ul li ul.dropdown li {
+
+.category ul li ul.dropdown li{
     display: block;
 }
 
@@ -124,16 +136,32 @@ body {
     padding-bottom: 8px;
 }
 
-.category ul li:hover ul.dropdown {
+.category ul li:hover ul.dropdown{
     display: block;
+}
+/* End category */
+
+.Empty-img{
+    
+}
+
+.text{
+    color: #074497;
 }
 
 
-/* End category */
+
+
+
+
+
+
+
+
+
 
 
 /* Footer */
-
 .footer {
     background-color: #24262b;
     padding: 70px 0;
@@ -143,23 +171,22 @@ body {
     max-width: 1170px;
     margin: auto;
 }
-
-.footer-row {
+.footer-row{
     display: flex;
     flex-wrap: wrap;
     list-style: none;
 }
 
-.footer-col {
+.footer-col{
     width: 25%;
     padding: 0 15px;
 }
 
-.footer ul {
+.footer ul{
     list-style: none;
 }
 
-.footer-col h4 {
+.footer-col h4{
     font-size: 18px;
     color: #fff;
     text-transform: capitalize;
@@ -168,8 +195,8 @@ body {
     position: relative;
 }
 
-.footer-col h4::before {
-    content: '';
+.footer-col h4::before{
+    content : '';
     position: absolute;
     left: 0;
     bottom: -10px;
@@ -179,11 +206,11 @@ body {
     width: 50px;
 }
 
-.footer-col ul li:not(:last-child) {
+.footer-col ul li:not(:last-child){
     margin-bottom: 10px;
 }
 
-.footer-col ul li a {
+.footer-col ul li a{
     font-size: 16px;
     text-transform: capitalize;
     color: #fff;
@@ -192,14 +219,15 @@ body {
     color: #bbbbbb;
     display: block;
     transition: all 0.3s ease;
+
 }
 
-.footer-col ul li a:hover {
+.footer-col ul li a:hover{
     color: #fff;
     padding-left: 10px;
 }
 
-.footer-col .social-links a {
+.footer-col .social-links a{
     display: inline-block;
     height: 40px;
     width: 40px;
@@ -210,46 +238,30 @@ body {
     border-radius: 50%;
     color: #fff;
     transition: all 1s ease;
+
 }
 
-.footer-col .social-links a:hover {
+.footer-col .social-links a:hover{
     color: #24262b;
     background-color: #fff;
 }
 
-.card-header {
-    color: #fff;
-    background-color: #24262b;
-}
-
-.btn {
-    height: 40px;
-    background-color: #24262b;
-    border: 0;
-}
-
-.btn:hover {
-    background-color: #16171a;
-}
 
 
 /*fix size*/
+@media(max-width: 767px){
 
-@media (min-width: 1025px) {
-    .h-custom {
-        height: 100vh !important;
-    }
-}
-
-@media(max-width: 767px) {
-    .footer-col {
+    .footer-col{
         width: 50%;
         margin-bottom: 30px;
     }
+
 }
 
-@media(max-width: 574px) {
-    .footer-col {
+@media(max-width: 574px){
+
+    .footer-col{
         width: 100%;
     }
+
 }
