@@ -3,14 +3,14 @@ var fs = require("fs");
 var path = require("path");
 var printFun = function(req,res){
 
-    var filepath = "./site2"+req.url;// if no any page return it will be '/'
+    var filepath = "./CS346-PROJECT"+req.url;// if no any page return it will be '/'
+    
+    if (filepath == "./CS346-PROJECT/")
 
-    if (filepath == "./site2/")
-
-        filepath = "./site2/index.html";
+        filepath = "./CS346-PROJECT/Home/index.html";
 
     var extname = path.extname(filepath);// should give filepath or it will not read css files
-
+    
     var contentType = 'text/html'; 
 
     switch(extname){
