@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -57,23 +58,26 @@ body {
     gap: 2rem;
 }
 
-.btn {
+.btn-cart {
     display: inline-block;
+    padding-bottom: 5px;
     padding: 0.6rem 2rem;
     font-weight: 500;
     border-radius: 1rem;
     cursor: pointer;
-    color: white;
+    color: rgb(255, 255, 255);
     background-color: hsla(239, 27%, 62%, 0.63);
     transition: all 300ms ease;
+    border: none;
 }
 
-.btn:hover {
-    opacity: 0.8;
+.btn-cart:hover {
+    opacity: 0.4;
 }
 
 .link {
     color: hsl(0, 0%, 100%);
+    margin-top: 15px;
     cursor: pointer;
 }
 
@@ -94,7 +98,7 @@ body {
 /* category */
 
 .category ul {
-    padding-top: 80px;
+    padding-top: 90px;
     list-style: none;
     background: #24262b;
 }
@@ -133,10 +137,14 @@ body {
 
 /* End category */
 
+
+
 .carousel {
     margin: 50px auto;
     padding: 0 70px;
 }
+
+
 
 
 /* Footer */
@@ -269,14 +277,13 @@ body {
 
 .section-title h2::before {
     position: absolute;
-    left: 50%;
     bottom: 0;
     content: "";
     background-color: #0167F3;
     height: 2px;
-    width: 50px;
+    width: 300px;
     margin-left: -25px;
-    border-radius: 2px;
+    border-radius: 4px;
 }
 
 .section-title p {
@@ -331,17 +338,18 @@ body {
     font-size: 13px;
     font-weight: 600;
     width: 140px;
-    color: #000000;
-    background-color: #0167F3;
+    color: #ffffff;
+    background-color: #074497;
     border-radius: 1rem;
+    text-decoration: none;
 }
 
 .single-product .product-image .button-product .btn-product i {
     font-size: 18px;
     position: relative;
     top: 2px;
-    color: #000000;
-    background-color: #0167F3;
+    color: #ffffff;
+    background-color: #074497;
 }
 
 .single-product .product-image img {
@@ -408,6 +416,7 @@ body {
     text-decoration: none;
 }
 
+
 .single-product .product-image .button-product .btn-product i {
     font-size: 18px;
     position: relative;
@@ -463,13 +472,3 @@ body {
     transition: all 300ms ease;
 }
 
-.btn-cart {
-    display: inline-block;
-    padding: 0.6rem 2rem;
-    font-weight: 500;
-    border-radius: 1rem;
-    cursor: pointer;
-    color: rgb(255, 255, 255);
-    background-color: hsla(239, 99%, 27%, 0.63);
-    transition: all 300ms ease;
-}
