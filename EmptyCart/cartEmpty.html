@@ -32,10 +32,35 @@
                 </div>
 
                 <div class="buttom">
-                    <a href="#"><p class="link">Account</p></a>
-                    <a href="#"><p class="link">Region</p></a>
+                    <button class="btn" id="show-reg"><img src="account-icon.png"></button>
+
+                    <!--Sign Up popup-->
+                    <div class="popup">
+                      <div class="close-btn">&times;</div>
+                      <div class="reg-form">
+                        <h2>Sign Up</h2>
+                        <div class="reg-form-element">
+                          <label for="email">Email</label>
+                          <input type="text" id="mail" placeholder="Enter email">
+                        </div>
+                        <div class="reg-form-element">
+                          <label for="password">Password</label>
+                          <input type="password" id="password" placeholder="Enter password">
+                        </div>
+                        <div class="reg-form-element">
+                          <input type="checkbox" id="remember-me">
+                          <label for="remember-me">remember me</label>
+                        </div>
+                        <div class="reg-form-element">
+                          <button class="btn">Sign Up</button>
+                        </div>
+                        <div class="reg-form-element">
+                          <a href="#">Forgot your password?</a>
+                        </div>
+                      </div>
+                    </div>
                     <!-- <a href="#"><p class="link">AR</p></a> -->
-                    <button class="btn">Cart</button> 
+                    <button class="btn"><img src="cart-icon.png"></button> 
                 </div>
 
             </div>
@@ -124,6 +149,7 @@
         </footer>
 
 
+        <script src="cartEmpty.js"></script>
 
 </body>
 </html>

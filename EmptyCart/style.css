@@ -64,20 +64,21 @@ body{
 .header .buttom {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 0.7rem;
 }
 
 .btn{
     display: inline-block;
-    padding: 0.6rem 2rem;
+    padding: 0.6rem 0.8rem;
     font-weight: 500;
     border-radius: 1rem;
     cursor: pointer;
     color: white;
-    background-color: hsla(239, 27%, 62%, 0.63);
+    background-color: hsla(239, 27%, 62%, 0.0);
     transition: all 300ms ease;
 
 }
+
 
 .btn:hover{
     opacity: 0.8;
@@ -97,7 +98,92 @@ body{
     padding-top: 0.7rem;
     color: white;
 }
-/* End Header style */
+
+.popup{
+    position: absolute;
+    top: -200%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%,-50%) scale(1.25);
+    width: 450px;
+    padding: 20px 30px;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px 5px rgb(0,0,0,0.15);
+    border-radius: 10px;
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms;
+}
+
+.popup.active{
+    margin-top: 340px;
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1);
+    transition: top 0ms ease-in-out 0ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms;
+}
+
+.popup .close-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    color: #888;
+    cursor: pointer;
+}
+
+.popup .reg-form h2{
+    text-align: center;
+    color: #888;
+    margin: 10px 0px 25px;
+    font-size: 25px;
+}
+
+.popup .reg-form .reg-form-element {
+    margin: 15px 0px;
+}
+
+.popup .reg-form .reg-form-element label {
+    font-size: 18px;
+    color: #24262b;
+}
+
+.popup .reg-form .reg-form-element input[type="text"],
+.popup .reg-form .reg-form-element input[type="password"]{
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+.popup .reg-form .reg-form-element input[type="checkbox"]{
+    margin-right: 10px;
+}
+
+.popup .reg-form .reg-form-element button{
+    width: 80%;
+    height: 45px;
+    border-radius: 7px;
+    background-color: #074497;
+}
+
+.popup .reg-form .reg-form-element a{
+    color: #074497;
+}
+
+
+
+
+
+
+
+/* End Header style 074497 */
 
 
 
