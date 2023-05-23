@@ -676,3 +676,9 @@ ul.dropdown{
         padding: 1rem;
     }
 }
+
+
+/* space between poster and slides  (When you see me XD change my place) */
+.spacePoster{
+    margin-top: 100px;
+}
