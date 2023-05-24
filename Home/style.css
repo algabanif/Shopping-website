@@ -682,3 +682,14 @@ ul.dropdown{
 .spacePoster{
     margin-top: 100px;
 }
+.spacePoster a{
+   color: #081828;
+   text-decoration: none;
+   display: block;
+    transition: all 0.3s ease;
+}
+
+.spacePoster a:hover {
+color: #074497;
+padding-left: 10px;
+}
