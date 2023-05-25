@@ -15,8 +15,18 @@ body {
 }
 
 
-/* Header style */
 
+
+
+
+
+
+
+
+
+
+
+/* Header style */
 .container-bar {
     width: 100%;
     margin: 0 auto;
@@ -90,12 +100,21 @@ body {
     padding-top: 0.7rem;
     color: white;
 }
-
-
 /* End Header style */
 
-/* User drop down menu*/
 
+
+
+
+
+
+
+
+
+
+
+
+/* User drop down menu*/
 .user-pic{
     width: 40px;
     border-radius: 50%;
@@ -186,7 +205,7 @@ body {
 .sub-menu-link:hover p{
     font-weight: 600;
 }
-
+/* End User drop down menu*/
 
 
 
@@ -199,7 +218,6 @@ body {
 
 
 /* category */
-
 .category ul {
     list-style: none;
     background: #24262b;
@@ -214,7 +232,6 @@ body {
 .category ul li a:hover {
     opacity: 0.5;
 }
-
 
 .category ul li a {
     display: block;
@@ -249,127 +266,49 @@ ul.dropdown{
 .category ul li:hover ul.dropdown {
     display: block;
 }
-
-
 /* End category */
 
 
 
-.carousel {
-    margin: 50px auto;
-    padding: 0 70px;
+
+
+
+
+
+
+
+
+/* Poster */
+
+.spacePoster{
+    margin-top: 100px;
 }
-
-
-
-/* Footer */
-
-.footer {
-    background-color: #24262b;
-    padding: 70px 0;
-}
-
-.footer-container {
-    max-width: 1170px;
-    margin: auto;
-}
-
-.footer-row {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-}
-
-.footer-col {
-    width: 25%;
-    padding: 0 15px;
-}
-
-.footer ul {
-    list-style: none;
-}
-
-.footer-col h4 {
-    font-size: 18px;
-    color: #fff;
-    text-transform: capitalize;
-    margin-bottom: 30px;
-    font-weight: 500;
-    position: relative;
-}
-
-.footer-col h4::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    background-color: #074497;
-    height: 2px;
-    box-sizing: border-box;
-    width: 50px;
-}
-
-.footer-col ul li:not(:last-child) {
-    margin-bottom: 10px;
-}
-
-.footer-col ul li a {
-    font-size: 16px;
-    text-transform: capitalize;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 300;
-    color: #bbbbbb;
-    display: block;
+.spacePoster a{
+   color: #081828;
+   text-decoration: none;
+   display: block;
     transition: all 0.3s ease;
 }
 
-.footer-col ul li a:hover {
-    color: #fff;
-    padding-left: 10px;
+.spacePoster a:hover {
+color: #074497;
+padding-left: 10px;
 }
 
-.footer-col .social-links a {
-    display: inline-block;
-    height: 40px;
-    width: 40px;
-    background-color: rgb(255, 255, 255, 0.2);
-    margin-right: 0 10px 10px 0;
-    text-align: center;
-    line-height: 40px;
-    border-radius: 50%;
-    color: #fff;
-    transition: all 1s ease;
-}
-
-.footer-col .social-links a:hover {
-    color: #24262b;
-    background-color: #fff;
-}
+/* End Poster */
 
 
-/*fix size*/
 
-@media(max-width: 767px) {
-    .footer-col {
-        width: 50%;
-        margin-bottom: 30px;
-    }
-}
 
-@media(max-width: 574px) {
-    .footer-col {
-        width: 100%;
-    }
-}
+
+
+
+
+
+
 
 
 /*Trending Product section */
-
-.trending-section-title {
-    margin-bottom: 20px;
-}
-
 .section-title {
     text-align: center;
     margin-bottom: 40px;
@@ -397,15 +336,13 @@ ul.dropdown{
     background-color: #0167F3;
     height: 2px;
     width: 300px;
-    margin-left: -25px;
+    margin-left: 13px;
     border-radius: 4px;
 }
 
 .section-title p {
     font-size: 14px;
 }
-
-
 
 .single-product {
     border: 1px solid #eee;
@@ -491,13 +428,6 @@ ul.dropdown{
     color: #081828;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px),
-(max-width: 767px) {
-    .single-product .product-info .title a {
-        font-size: 15px;
-    }
-}
-
 .single-product .product-info .title a:hover {
     color: #0167F3;
 }
@@ -529,81 +459,141 @@ ul.dropdown{
 }
 
 
-/*login section*/
 
 
 
-.modal-header .close {
-    border: none;
-    margin-top: 1.5rem;
-    background: fixed;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+.footer {
+    background-color: #24262b;
+    padding: 70px 0;
 }
 
-.form-title {
-    margin: -2rem 0rem 2rem;
+.footer-container {
+    max-width: 1170px;
+    margin: auto;
 }
 
-.btn-login-round {
-    border-radius: 3rem;
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
 }
 
-.delimiter {
-    padding: 1rem;
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
 }
 
-.social-buttons .btn-login {
-    margin: 0 0.5rem 1rem;
+.footer ul {
+    list-style: none;
 }
 
-.signup-section {
-    padding: 0.3rem 0rem;
-}
-
-.btn-login-submit {
-    display: inline-block;
-    padding: 0.6rem 2rem;
+.footer-col h4 {
+    font-size: 18px;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 30px;
     font-weight: 500;
-    border-radius: 1rem;
-    cursor: pointer;
-    color: rgb(255, 255, 255);
-    background-color: hsla(239, 99%, 27%, 0.63);
-    transition: all 300ms ease;
-}
-
-.ahmad img{
-    height: 150px;
-}
-
-.ahmad img{
-    width: 80px;
-    height: 100px;
-    margin-left: 40%;
-    margin-top: 50px;
-}
-
-.nawaf{
-    height: 500px;
-    display: inline-block;
     position: relative;
 }
 
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #074497;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
 
-.seeMore-btn{
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #fff;
     text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
     transition: all 0.3s ease;
 }
 
-.seeMore-btn{
-    font-size: medium;
-    transition: transform 0.5s;
-    color: #000000!important;
+.footer-col ul li a:hover {
+    color: #fff;
+    padding-left: 10px;
 }
 
-.seeMore-btn:hover {
-    transform: translate(5px);
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(255, 255, 255, 0.2);
+    margin-right: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 1s ease;
 }
 
-   
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+/*fix size*/
+
+@media(max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px),
+(max-width: 767px) {
+    .single-product .product-info .title a {
+        font-size: 15px;
+    }
+}
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .section-title {
@@ -679,17 +669,3 @@ ul.dropdown{
 
 
 /* space between poster and slides  (When you see me XD change my place) */
-.spacePoster{
-    margin-top: 100px;
-}
-.spacePoster a{
-   color: #081828;
-   text-decoration: none;
-   display: block;
-    transition: all 0.3s ease;
-}
-
-.spacePoster a:hover {
-color: #074497;
-padding-left: 10px;
-}
