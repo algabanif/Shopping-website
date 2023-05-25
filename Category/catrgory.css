@@ -20,6 +20,10 @@ body {
 
 
 
+
+
+
+
 /* Header style */
 
 .container-bar {
@@ -100,16 +104,18 @@ body {
 
 
 
-/*login section*/
 
-@media (min-width: 576px) {
-    .modal-dialog {
-        max-width: 400px;
-    }
-    .modal-dialog .modal-content {
-        padding: 1rem;
-    }
-}
+
+
+
+
+
+
+
+
+
+
+/*login section*/
 
 .modal-header .close {
     border: none;
@@ -214,7 +220,6 @@ ul.dropdown{
 .category ul li:hover ul.dropdown {
     display: block;
 }
-
 /* End category */
 
 
@@ -232,11 +237,7 @@ ul.dropdown{
 
 
 
-
-/*Trending Product section */
-
-
-
+/* Product */
 .trending-section-title {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -275,19 +276,6 @@ ul.dropdown{
 
 .section-title p {
     font-size: 14px;
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-    .section-title {
-        padding: 0px 250px;
-    }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    .section-title {
-        padding: 0px 20px;
-        margin-bottom: 30px;
-    }
 }
 
 .single-product {
@@ -374,12 +362,6 @@ ul.dropdown{
     color: #081828;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px),
-(max-width: 767px) {
-    .single-product .product-info .title a {
-        font-size: 15px;
-    }
-}
 
 .single-product .product-info .title a:hover {
     color: #0167F3;
@@ -411,55 +393,7 @@ ul.dropdown{
     background-color: #0167F3;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* End Product */
 
 
 
@@ -474,7 +408,6 @@ ul.dropdown{
 
 
 /* Footer */
-
 .footer {
     background-color: #24262b;
     padding: 70px 0;
@@ -557,10 +490,20 @@ ul.dropdown{
     color: #24262b;
     background-color: #fff;
 }
+/* End Footer */
+
+
+
+
+
+
+
+
+
+
 
 
 /*fix size*/
-
 @media(max-width: 767px) {
     .footer-col {
         width: 50%;
@@ -574,3 +517,32 @@ ul.dropdown{
     }
 }
 
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 400px;
+    }
+    .modal-dialog .modal-content {
+        padding: 1rem;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px),
+(max-width: 767px) {
+    .single-product .product-info .title a {
+        font-size: 15px;
+    }
+}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .section-title {
+        padding: 0px 250px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .section-title {
+        padding: 0px 20px;
+        margin-bottom: 30px;
+    }
+}

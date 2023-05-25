@@ -21,17 +21,20 @@
     <nav class="header">
         <div class="container-bar">
 
-            <a href="/Home/index.html">
-            <img src="images/Logo1.png" style="height: 65px; ">
-            </a>
+            <!-- Logo -->
+            <a href="/Home/index.html"><img src="images/Logo1.png" style="height: 65px; "></a>
 
+            <!-- Search bar -->
             <div class="search-bar">
-                <input type="search" placeholder="Search">
+                <input type="text" placeholder="Search..." name="q">
+                <button type="submit"><img src="/Home/images/search.png"></button>
             </div>
 
+            <!-- Right side header-->
             <div class="buttom">
-                <img src="./images/user.png" class="user-pic" onclick="toggleMenu()">
 
+                <!-- User profile -->
+                <a><img src="./images/user.png" class="user-pic" onclick="toggleMenu()"></a>
                 <div class="sub-menu-wrap" id="subMenu">
                     <div class="sub-menu">
                         <div class="user-info">
@@ -66,11 +69,11 @@
                     </div>
                 </div>
 
-                <a href="#">
-                    <p class="link"><img src="images/reg.png" style="padding-left: 10px;"></p>
-                </a>
-                <!-- <a href="#"><p class="link">AR</p></a> -->
-                <a href="/EmptyCart/cartEmpty.html"><button class="btn-cart"> <img src="images/cart-icon.png"> </button> </a>
+                <!-- Flags -->
+                <a href="#"><p class="link"><img src="images/reg.png"></p></a>
+
+                <!-- Cart -->
+                <a href="/EmptyCart/cartEmpty.html"><img src="images/cart-icon.png"></a>
             </div>
 
         </div>
