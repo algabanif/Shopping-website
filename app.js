@@ -66,6 +66,4 @@ app.use((req,res) => { //Error link
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
-
-
 // 1st run this file then run DB 

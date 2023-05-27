@@ -336,6 +336,7 @@ ul.dropdown{
 
 .serv:hover{
     padding-top: 10px;
+    padding-bottom: 10px;
     border: 2px solid #074497;
     border-radius: 10px;
     border-left: 5px solid #074497;

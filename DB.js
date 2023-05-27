@@ -8,7 +8,7 @@ const DB = module.exports = () =>{
         useUnifiedTopology: true,
     };
     try {
-        var url = "mongodb+srv://faisalmq0:qw5CbhExTMZKdgvI@cluster0.0rxnlqx.mongodb.net/?retryWrites=true&w=majority"
+        var url = "mongodb+srv://faisalmq0:qw5CbhExTMZKdgvI@cluster0.0rxnlqx.mongodb.net/cwData?retryWrites=true&w=majority"
         mongoose.connect(url, connectionParams)
         console.log("DB connected succesfully");
     } catch(error){
