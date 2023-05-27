@@ -259,10 +259,12 @@ body {
     display: inline-block;
     position: relative;
     
+    
 }
 
 .category ul li a:hover {
     opacity: 0.5;
+    margin-left: 10px;
 }
 
 .category ul li a {
@@ -272,6 +274,7 @@ body {
     text-decoration: none;
     text-align: center;
     font-size: 20px;
+    transition: all 0.3s;
 }
 
 .category ul li ul.dropdown li {
@@ -311,21 +314,34 @@ ul.dropdown{
 
 
 /* Poster */
-
 .spacePoster{
     margin-top: 100px;
 }
+
 .spacePoster a{
    color: #081828;
    text-decoration: none;
    display: block;
-    transition: all 0.3s ease;
+   transition: all 0.3s ease;
 }
 
 .spacePoster a:hover {
-color: #074497;
-padding-left: 10px;
+    color: #074497;
+    padding-left: 10px;
 }
+
+.serv{
+    transition: all 0.3s ease;
+}
+
+.serv:hover{
+    padding-top: 10px;
+    border: 2px solid #074497;
+    border-radius: 10px;
+    border-left: 5px solid #074497;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
 
 /* End Poster */
 
