@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <title>Online Shoping website </title>
+</head>
+
+<body>
+
+
+    <!-- Header -->
+    <nav class="header">
+        <div class="container-bar">
+
+            <!-- Logo -->
+            <a href="home"><img src="images/Logo1.png" style="height: 65px; "></a>
+
+            <!-- Search bar -->
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search..." name="q">
+                <button type="submit"><img src="images/search.png"></button>
+            </div>
+
+            <!-- Right side header-->
+            <div class="buttom">
+
+                <!-- User profile -->
+                <a><img src="./images/userTest.png" class="user-pic" onclick="toggleMenu()"></a>
+                <div class="sub-menu-wrap" id="subMenu">
+                    <div class="sub-menu">
+                        <div class="user-info">
+                            <img src="./images/user.png">
+                            <h2> Faisal Moh </h2>
+                        </div>
+                        <hr>
+
+                        <a href="#" class="sub-menu-link"> 
+                            <img src="./images/profile.png">
+                            <p>Edit Profile</p>
+                            <span>></span>
+                        </a>
+                        
+                        <a href="#" class="sub-menu-link"> 
+                            <img src="./images/setting.png">
+                            <p>Settings & privacey</p>
+                            <span>></span>
+                        </a>
+
+                        <a href="#" class="sub-menu-link"> 
+                            <img src="./images/help.png">
+                            <p>Help & Support</p>
+                            <span>></span>
+                        </a>
+                        
+                        <a href="#" class="sub-menu-link"> 
+                            <img src="./images/logout.png">
+                            <p>Logout</p>
+                            <span>></span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Flags -->
+                <a href="#"><p class="link"><img src="images/reg.png"></p></a>
+
+                <!-- Cart -->
+                <a href="cartEmpty"><img src="images/cart-icon.png"></a>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- category  -->
+    <section class="category ">
+        <ul>
+            <li>
+                <a href="#">Categorys ▼</a>
+                <ul class="dropdown">
+                    <li><a href="category">CPU</a></li>
+                    <li><a href="category">GPU</a></li>
+                    <li><a href="category">COOLERS</a></li>
+                    <li><a href="category">STORAGE</a></li>
+                    <li><a href="category">PowerSupply</a></li>
+                    <li><a href="category">MotherBoards</a></li>
+                </ul>
+            </li>
+            <li><a href="category">COMPUTER</a></li>
+            <li><a href="category">COMPUTER ACCESSORIES</a></li>
+            <li><a href="category">MONITORS</a></li>
+            <li><a href="category">OFFICE & NETWORKING</a></li>
+            <li><a href="category">SMART PHONES & TABLET</a></li>
+            <li><a href="category">VIDEO GAMES</a></li>
+            <li><a href="category">DIGITAL CARDS</a></li>
+        </ul>
+    </section>
+
+    <!-- Slides show -->
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100 " src="images/Slide1.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="images/Slide2.png" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="images/Slide3.png" alt="Third slide">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <!-- posters -->
+    <div class="spacePoster">
+            <div class="container px-5">
+                <div class="row gx-5 text-center">
+                  
+                    <div class="col-lg-4 mb-5 mb-lg-0 serv">
+                        <div class="icon-stack icon-stack-xl bg-gradient-primary-to-secondary text-white mb-4">
+                            <i-feather name="layers">
+                                    <img src="images/service1.png" style="height: 100px;">
+                            </i-feather>
+                        </div>
+                        <h3><a href="#">build your personal computer</a></h3>
+                        <p class="mb-0">building your own PC is a process of selecting compatible parts into a custom computer that suits your needs and preferences.</p>
+                    </div>
+
+
+                    <div class="col-lg-4 mb-5 mb-lg-0 serv">
+                        <div class="icon-stack icon-stack-xl bg-gradient-primary-to-secondary text-white mb-4">
+                            <i-feather name="smartphone">
+                                    <img src="images/service2.png" style="height: 100px;">
+                            </i-feather>
+                        </div>
+                        <h3><a href="#">Computer parts maintenance</a></h3>
+                        <p class="mb-0">Process of keeping or reparing your computer’s physical components in good condition and ensuring they perform optimally.</p>
+                    </div>
+                    
+                    <div class="col-lg-4 mb-5 mb-lg-0 serv">
+                        <div class="icon-stack icon-stack-xl bg-gradient-primary-to-secondary text-white mb-4">
+                            <i-feather name="code">
+                                    <img src="images/service3.png" style="height: 100px;">
+                            </i-feather>
+                        </div>
+                        <h3><a href="#">Computer system maintenance</a></h3>
+                        <p class="mb-0">Proccess of keeping your computer in a good state of repair by performing regular tasks such as updating, scanning and troubleshooting.</p>
+                    </div>
+               
+                </div>
+            </div>
+    </div>
+
+
+    <!--Trending section-->
+    <section class="trending-section-title" style="margin-top: 100px; margin-bottom: 200px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title">
+                        <h2 >Our trending Product </h2>
+                    </div>
+                </div>
+            </div>
+            <!--End Trending section Paragrah-->
+
+            <div class="row">
+                <!--single product -->
+                <% if (Array.isArray(products) && products.length > 0) { %>
+                <% products.forEach(product => { %>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="single-product">
+                        <div class="product-image">
+                            <img src="/uploads/<%= product.image %>" alt="#">
+                            <div class="button-product">
+                                <a href="#" class="btn-product"><i class="lni lni-cart"></i>Add to cart</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category"> <%= product.category %></span>
+                            <h4 class="title-info">
+                                <a href="#"> <%= product.productName %></a>
+                            </h4>
+                            <div class="price">
+                                <span><%= product.price %></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% }); %>
+                <% } else { %>
+                <p class="mt-4">No products found.</p>
+                <% } %>
+            </div>
+                <!-- <div class="col-lg-3 col-md-6 col-12">
+                    <div class="single-product">
+                        <div class="product-image">
+                            <img src="images/product-8.jpg" alt="#">
+                            <div class="button-product">
+                                <a href="#" class="btn-product"><i class="lni lni-cart"></i>Add to cart</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category">Laptops</span>
+                            <h4 class="title-info">
+                                <a href="#">Aourea Laptop</a>
+                            </h4>
+                            <div class="price">
+                                <span>$4399.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="col-lg-3 col-md-6 col-12">
+                    <div class="single-product">
+                        <div class="product-image">
+                            <img src="images/product-1.jpg" alt="#">
+                            <div class="button-product">
+                                <a href="#" class="btn-product"><i class="lni lni-cart"></i>Add to cart</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category">Watches</span>
+                            <h4 class="title-info">
+                                <a href="#">Xiamoi Mi Band 5</a>
+                            </h4>
+                            <div class="price">
+                                <span>$199.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="col-lg-3 col-md-6 col-12">
+                    <div class="single-product">
+                        <div class="product-image">
+                            <img src="images/product-2.jpg" alt="#">
+                            <div class="button-product">
+                                <a href="#" class="btn-product"><i class="lni lni-cart"></i>Add to cart</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category">Speaker</span>
+                            <h4 class="title-info">
+                                <a href="#">Speaker</a>
+                            </h4>
+                            <div class="price">
+                                <span>$599.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="col-lg-3 col-md-6 col-12">
+                    <div class="single-product">
+                        <div class="product-image">
+                            <img src="images/product-3.jpg" alt="#">
+                            <div class="button-product">
+                                <a href="#" class="btn-product"><i class="lni lni-cart"></i>Add to cart</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category">Cameras</span>
+                            <h4 class="title-info">
+                                <a href="#">Camera 5</a>
+                            </h4>
+                            <div class="price">
+                                <span>$334.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="single-product">
+                        <div class="product-image">
+                            <img src="images/product-4.jpg" alt="#">
+                            <div class="button-product">
+                                <a href="#" class="btn-product"><i class="lni lni-cart"></i>Add to cart</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category">Phones</span>
+                            <h4 class="title-info">
+                                <a href="#">iPhone 8</a>
+                            </h4>
+                            <div class="price">
+                                <span>$1949.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="single-product">
+                        <div class="product-image">
+                            <img src="images/product-6.jpg" alt="#">
+                            <div class="button-product">
+                                <a href="#" class="btn-product"><i class="lni lni-cart"></i>Add to cart</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category">Speaker</span>
+                            <h4 class="title-info">
+                                <a href="#">Speaker 1</a>
+                            </h4>
+                            <div class="price">
+                                <span>$759.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="col-lg-3 col-md-6 col-12">
+                    <div class="single-product">
+                        <div class="product-image">
+                            <img src="images/product-5.jpg" alt="#">
+                            <div class="button-product">
+                                <a href="#" class="btn-product"><i class="lni lni-cart"></i>Add to cart</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category">Headsets</span>
+                            <h4 class="title-info">
+                                <a href="#">Headset Logitec</a>
+                            </h4>
+                            <div class="price">
+                                <span>$153.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+
+        <!-- </div> -->
+    </section>
+    <!--End Single product -->
+
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-row">
+
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>online shop</h4>
+                    <ul>
+                        <li><a href="#">Apple</a></li>
+                        <li><a href="#">SAMSUNG</a></li>
+                        <li><a href="#">SONY</a></li>
+                        <li><a href="#">GOOGLE</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
+    <!-- Popper JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>
+    <!-- Bootstrap JS -->
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+
+
+    <script>
+
+        let subMenu = document.getElementById("subMenu");
+
+        function toggleMenu(){
+            subMenu.classList.toggle("open-menu");
+        }
+    // Function to handle filtering products by name
+    function filterProductsByNameOrCategory() {
+  const searchInput = document.getElementById('search-input');
+  const filterValue = searchInput.value.toLowerCase();
+  const productItems = document.querySelectorAll('.single-product');
+
+  productItems.forEach((productItem) => {
+    const productName = productItem.querySelector('.title-info a').textContent.toLowerCase();
+    const productCategory = productItem.querySelector('.category').textContent.toLowerCase();
+    if (productName.includes(filterValue) || productCategory.includes(filterValue)) {
+      productItem.style.display = 'block';
+    } else {
+      productItem.style.display = 'none';
+    }
+  });
+}
+
+// Add event listener to search input
+const searchInput = document.getElementById('search-input');
+searchInput.addEventListener('input', filterProductsByNameOrCategory);
+    </script>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,101 @@
+<style>
+    /* Styles for the form */
+    
+    .form-container {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    .form-label {
+        font-weight: bold;
+    }
+    
+    .form-input {
+        width: 100%;
+        padding: 5px;
+    }
+    
+    .form-submit {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+
+<!-- EJS template file: editproduct.ejs -->
+<div class="form-container">
+    <h2>Edit Form</h2>
+    <form id="editForm" action="<%= `/update-product/${product._id}` %>" method="PUT">
+        <div class="form-group">
+            <label for="productName" class="form-label">Product Name:</label>
+            <input type="text" id="productName" name="productName" class="form-input" required value="<%= product.productName %>">
+        </div>
+        <div class="form-group">
+            <label for="description" class="form-label">Description:</label>
+            <input type="text" id="description" name="description" class="form-input" value="<%= product.description %>">
+        </div>
+        <div class="form-group">
+            <label for="quantity" class="form-label">Quantity:</label>
+            <input type="text" id="quantity" name="quantity" class="form-input" value="<%= product.quantity %>">
+        </div>
+        <div class="form-group">
+            <label for="status" class="form-label">Status:</label>
+            <input type="text" id="status" name="status" class="form-input" value="<%= product.status %>">
+        </div>
+        <div class="form-group">
+            <label for="category" class="form-label">Category:</label>
+            <input type="text" id="category" name="category" class="form-input" value="<%= product.category %>">
+        </div>
+        <div class="form-group">
+            <label for="type" class="form-label">Type:</label>
+            <input type="text" id="type" name="type" class="form-input" value="<%= product.type %>">
+        </div>
+        <div class="form-group">
+            <label for="image" class="form-label">Image:</label>
+            <input type="file" id="image" name="image" accept="image/*" class="form-input">
+        </div>
+        <input type="hidden" id="productId" name="productId" value="<%= product._id %>">
+        <button type="submit" class="form-submit">Update Product</button>
+    </form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    // Function to handle form submission
+    function handleSubmit(event) {
+        event.preventDefault(); // Prevent the default form submission
+        const form = document.getElementById('editForm');
+        const formData = new FormData(form); // Create a FormData object
+        const productId = document.getElementById('productId').value;
+        // Perform the PUT request using Axios
+        axios.put(`http://127.0.0.1:3004/product/editproduct/${productId}`, formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                    Authorization: `Bearer ${localStorage.getItem('token')}`
+                }
+            })
+            .then(response => {
+                // Handle the response, e.g., display success message
+                if (response.status === 200) {
+                    alert(response.data);
+                } else if (response.status === 201) {
+                    alert(response.data);
+                }
+                // Do any additional processing or page navigation as needed
+            })
+            .catch(error => {
+                // Handle the error, e.g., display error message
+                console.error('Error updating product:', error);
+                // Do any additional error handling as needed
+            });
+    }
+
+    // Add event listener to form submission
+    const form = document.getElementById('editForm');
+    form.addEventListener('submit', handleSubmit);
+</script>

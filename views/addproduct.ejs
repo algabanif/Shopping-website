@@ -1,0 +1,120 @@
+<style>
+    /* Styles for the form */
+    
+    .form-container {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    .form-label {
+        font-weight: bold;
+    }
+    
+    .form-input {
+        width: 100%;
+        padding: 5px;
+    }
+    
+    .form-submit {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+<!-- EJS template file: addproduct.ejs -->
+<div class="form-container">
+    <h2>Add Product Form</h2>
+    <form id="addForm" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="productName" class="form-label">Product Name:</label>
+            <input type="text" id="productName" name="productName" required class="form-input">
+        </div>
+        <div class="form-group">
+            <label for="description" class="form-label">Description:</label>
+            <input type="text" id="description" name="description" class="form-input">
+        </div>
+        <div class="form-group">
+            <label for="quantity" class="form-label">Quantity:</label>
+            <input type="text" id="quantity" name="quantity" class="form-input">
+        </div>
+        <div class="form-group">
+            <label for="status" class="form-label">Status:</label>
+            <input type="text" id="status" name="status" class="form-input">
+        </div>
+        <div class="form-group">
+            <label for="category" class="form-label">Category:</label>
+            <input type="text" id="category" name="category" class="form-input">
+        </div>
+        <div class="form-group">
+            <label for="type" class="form-label">Type:</label>
+            <input type="text" id="type" name="type" class="form-input">
+        </div>
+        <div class="form-group">
+            <label for="image" class="form-label">Image:</label>
+            <input type="file" id="image" name="image" accept="image/*" class="form-input">
+        </div>
+        <button type="submit" class="form-submit">Add Product</button>
+    </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    // Function to handle form submission
+    function handleSubmit(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Get the form field values
+        const productName = document.getElementById('productName').value;
+        const description = document.getElementById('description').value;
+        const quantity = document.getElementById('quantity').value;
+        const status = document.getElementById('status').value;
+        const category = document.getElementById('category').value;
+        const type = document.getElementById('type').value;
+
+        // Get the selected image file
+        const imageFile = document.getElementById('image').files[0];
+
+        // Create a FormData object to store the form data including the image
+        const formData = new FormData();
+        formData.append('productName', productName);
+        formData.append('description', description);
+        formData.append('quantity', quantity);
+        formData.append('status', status);
+        formData.append('category', category);
+        formData.append('type', type);
+        formData.append('image', imageFile);
+
+        // Perform the POST request using Axios
+        axios.post('http://127.0.0.1:3004/product/addproduct', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                    Authorization: `Bearer ${localStorage.getItem('token')}`
+                }
+            })
+            .then(response => {
+                // Handle the response, e.g., display success message
+                if (response.status === 200) {
+                    alert('Product added successfully');
+                } else {
+                    alert('Error in insertion');
+                }
+                //   console.log('Product added successfully');
+                // Do any additional processing or page navigation as needed
+            })
+            .catch(error => {
+                // Handle the error, e.g., display error message
+                console.error('Error adding product:', error);
+                // Do any additional error handling as needed
+            });
+    }
+
+    // Add event listener to form submission
+    const form = document.getElementById('addForm');
+    form.addEventListener('submit', handleSubmit);
+</script>
