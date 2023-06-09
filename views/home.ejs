@@ -155,8 +155,8 @@
                 <% products.forEach(product => { %>
                 <div class="col-lg-3 col-md-6 col-12">
                     <div class="single-product">
-                        <div class="product-image">
-                            <img src="/uploads/<%= product.image %>" alt="#">
+                        <div class="product-image" style="height: 250px; justify-content: center; " >
+                            <img src="/uploads/<%= product.image %>"  style="max-height: 250px;" alt="#">
                             <div class="button-product">
                                 <a href="#" class="btn-product"><i class="lni lni-cart"></i>Add to cart</a>
                             </div>
@@ -212,8 +212,8 @@
                 <div class="footer-col">
                     <h4>My Account</h4>
                     <ul>
-                        <li><a href="#">Login/Register</a></li>
-                        <li><a href="#">My Cart</a></li>
+                        <li><a href="http://127.0.0.1:3004/signUp">Login/Register</a></li>
+                        <li><a href="Cart">My Cart</a></li>
                         <li><a href="#">Order History</a></li>
                         <li><a href="#">Returns History</a></li>
                         
@@ -223,7 +223,7 @@
                 <div class="footer-col">
                     <h4>follow us</h4>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://github.com/Faisal-Algabni/CS346-Project.git"><i class="fa-brands fa-github"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
