@@ -97,19 +97,19 @@
             <div class="form-content">
               <div class="login-form">
                 <div class="title">Login</div>
-              <form action="#">
+              <form id="login-form">
                 <div class="input-boxes">
                   <div class="input-box">
                     <i class="fas fa-envelope"></i>
-                    <input type="text" placeholder="Enter your email" required>
+                    <input type="text" id="loginemailInput" placeholder="Enter your email" required>
                   </div>
                   <div class="input-box">
                     <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Enter your password" required>
+                    <input type="password" id="loginpasswordInput" placeholder="Enter your password" required>
                   </div>
                   <div class="text"><a href="#">Forgot password?</a></div>
                   <div class="button input-box">
-                    <input type="submit" value="Sumbit">
+                    <input type="submit" value="Submit" id="submitButton">
                   </div>
                   <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup now</label></div>
                 </div>
@@ -117,26 +117,26 @@
           </div>
             <div class="signup-form">
               <div class="title">Signup</div>
-            <form action="#">
+              <form id="addForm" action="#">
                 <div class="input-boxes">
                   <div class="input-box">
                     <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Enter your name" required>
+                    <input type="text" id="nameInput" placeholder="Enter your name" required>
                   </div>
                   <div class="input-box">
                     <i class="fas fa-envelope"></i>
-                    <input type="text" placeholder="Enter your email" required>
+                    <input type="email" id="emailInput" placeholder="Enter your email" required>
                   </div>
                   <div class="input-box">
                     <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Enter your password" required>
+                    <input type="password" id="passwordInput" placeholder="Enter your password" required>
                   </div>
                   <div class="button input-box">
-                    <input type="submit" value="Sumbit">
+                    <input type="submit" value="Submit" id="submitButton">
                   </div>
                   <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
                 </div>
-          </form>
+              </form>
         </div>
         </div>
         </div>
@@ -193,6 +193,106 @@
 
 
         <script src="cartEmpty.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+  // Function to handle form submission
+  function handleSignup(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Get the form data
+    const name = document.getElementById('nameInput').value;
+    const email = document.getElementById('emailInput').value;
+    const password = document.getElementById('passwordInput').value;
+
+    // Create an object with the form data
+    const formData = {
+      name: name,
+      email: email,
+      password: password
+    };
+
+    // Perform the API request using Axios
+    axios.post('http://localhost:3004/user/signup', formData)
+      .then(response => {
+        // Handle the response, e.g., display success message
+        if(response.status == 200){
+          alert("Signup successfull")
+        }
+        else{
+          if(response.status == 202){
+          alert("Email Already Exist")
+        }
+        else{
+          alert("Something went wrong")
+        }
+        }
+        // console.log('Form submitted successfully');
+        // Do any additional processing or page navigation as needed
+      })
+      .catch(error => {
+        // Handle the error, e.g., display error message
+        console.error('Error submitting form:', error);
+        // Do any additional error handling as needed
+      });
+  }
+  function handleLogin(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Get the form data
+    const email = document.getElementById('loginemailInput').value;
+    const password = document.getElementById('loginpasswordInput').value;
+
+    // Create an object with the form data
+    const formData = {
+      email: email,
+      password: password
+    };
+
+    // Perform the API request using Axios
+    axios.post('http://localhost:3004/user/login', formData)
+      .then(response => {
+        // Handle the response, e.g., display success message
+        if(response.status == 200){
+          localStorage.setItem('token',response.data.data.token)
+          if(response.data.data.is_admin){
+            window.location.href = '/Admin';
+          }
+          else{
+            window.location.href = '/home';
+          }
+          
+          alert("Login successfull")
+        }
+        else{
+          if(response.status == 202){
+          alert("Email does not exist")
+        }
+        else{
+          if(response.status == 205){
+          alert("Incorrect Password")
+        }
+        else{
+          alert("Something went wrong")
+        }
+        }
+        }
+        // console.log('Form submitted successfully');
+        // Do any additional processing or page navigation as needed
+      })
+      .catch(error => {
+        // Handle the error, e.g., display error message
+        console.error('Error submitting form:', error);
+        // Do any additional error handling as needed
+      });
+  }
+  // Add event listener to form submission
+  const form = document.getElementById('addForm');
+  form.addEventListener('submit', handleSignup);
+ 
+  const loginform = document.getElementById('login-form'); // Corrected ID
+
+loginform.addEventListener('submit', handleLogin);
+</script>
 
 </body>
 </html>

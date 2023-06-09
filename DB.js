@@ -18,8 +18,8 @@ const DB = module.exports = () =>{
 
 DB();
 
-app.listen(3004, () => {
-    console.log("Server is running on port 3004");
-});
+// app.listen(3004, () => {
+//     console.log("Server is running on port 3004");
+// });
 
 // Node DB.js to run

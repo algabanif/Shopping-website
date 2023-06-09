@@ -26,7 +26,7 @@
 
             <!-- Search bar -->
             <div class="search-bar">
-                <input type="text" placeholder="Search..." name="q">
+                <input type="text" id="search-input" placeholder="Search..." name="q">
                 <button type="submit"><img src="images/search.png"></button>
             </div>
 
@@ -181,26 +181,33 @@
 
             <div class="row">
                 <!--single product -->
+                <% if (Array.isArray(products) && products.length > 0) { %>
+                <% products.forEach(product => { %>
                 <div class="col-lg-3 col-md-6 col-12">
                     <div class="single-product">
                         <div class="product-image">
-                            <img src="images/product-7.jpg" alt="#">
+                            <img src="/uploads/<%= product.image %>" alt="#">
                             <div class="button-product">
                                 <a href="#" class="btn-product"><i class="lni lni-cart"></i>Add to cart</a>
                             </div>
                         </div>
                         <div class="product-info">
-                            <span class="category">Headsets</span>
+                            <span class="category"> <%= product.category %></span>
                             <h4 class="title-info">
-                                <a href="#">HeadSet Razer</a>
+                                <a href="#"> <%= product.productName %></a>
                             </h4>
                             <div class="price">
-                                <span>$669.00</span>
+                                <span><%= product.price %></span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-12">
+                <% }); %>
+                <% } else { %>
+                <p class="mt-4">No products found.</p>
+                <% } %>
+            </div>
+                <!-- <div class="col-lg-3 col-md-6 col-12">
                     <div class="single-product">
                         <div class="product-image">
                             <img src="images/product-8.jpg" alt="#">
@@ -218,8 +225,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12">
+                </div> -->
+                <!-- <div class="col-lg-3 col-md-6 col-12">
                     <div class="single-product">
                         <div class="product-image">
                             <img src="images/product-1.jpg" alt="#">
@@ -237,8 +244,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12">
+                </div> -->
+                <!-- <div class="col-lg-3 col-md-6 col-12">
                     <div class="single-product">
                         <div class="product-image">
                             <img src="images/product-2.jpg" alt="#">
@@ -256,8 +263,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12">
+                </div> -->
+                <!-- <div class="col-lg-3 col-md-6 col-12">
                     <div class="single-product">
                         <div class="product-image">
                             <img src="images/product-3.jpg" alt="#">
@@ -313,8 +320,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12">
+                </div> -->
+                <!-- <div class="col-lg-3 col-md-6 col-12">
                     <div class="single-product">
                         <div class="product-image">
                             <img src="images/product-5.jpg" alt="#">
@@ -332,10 +339,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
 
-        </div>
+        <!-- </div> -->
     </section>
     <!--End Single product -->
 
@@ -407,7 +414,26 @@
         function toggleMenu(){
             subMenu.classList.toggle("open-menu");
         }
+    // Function to handle filtering products by name
+    function filterProductsByNameOrCategory() {
+  const searchInput = document.getElementById('search-input');
+  const filterValue = searchInput.value.toLowerCase();
+  const productItems = document.querySelectorAll('.single-product');
 
+  productItems.forEach((productItem) => {
+    const productName = productItem.querySelector('.title-info a').textContent.toLowerCase();
+    const productCategory = productItem.querySelector('.category').textContent.toLowerCase();
+    if (productName.includes(filterValue) || productCategory.includes(filterValue)) {
+      productItem.style.display = 'block';
+    } else {
+      productItem.style.display = 'none';
+    }
+  });
+}
+
+// Add event listener to search input
+const searchInput = document.getElementById('search-input');
+searchInput.addEventListener('input', filterProductsByNameOrCategory);
     </script>
 
 

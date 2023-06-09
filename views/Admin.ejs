@@ -57,9 +57,9 @@
                                 <img src="/Admin/img-Admin/user.png" style="height:  70px;">
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card" id="cardContainer">
                             <div class="box">
-                                <h1>53</h1>
+                                <h1><%= products.length %></h1>
                                 <h3>Products</h3>
                             </div>
                             <div class="icon-case">
@@ -313,5 +313,12 @@
                 <h2>section6</h2>
             </section>
     </div>
+    <script>
+        const cardContainer = document.getElementById('cardContainer');
+      
+        cardContainer.addEventListener('click', () => {
+            window.location.href = '/products';
+        });
+      </script>
 </body>
 </html>
