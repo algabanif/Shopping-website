@@ -1,6 +1,8 @@
 # Shopping website
-Path Planning is a fundamental problem in robotics. It aims to find an optimal <br />
-free-obstacle path for a robot from a starting position to a given destination
+Our shopping website is for computers hardware and software, office parts, and games would be a one-stop-shop for </br>
+all things tech-related. The website would feature a wide variety of products from different manufacturers, including desktops,</br>
+laptops, monitors, printers, scanners, keyboards, mice, and other office-related peripherals.
+In addition to hardware and office parts, the website would also offer a wide selection of software, including operating systems, productivity software, security software, and more.
 
 # Main Goals
 The purpose of this project is to design and implement the 
