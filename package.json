@@ -7,7 +7,6 @@
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.0",
     "livereload": "^0.9.3",
-    "mongodb": "^5.6.0",
     "mongoos": "^0.0.1-security",
     "mongoose": "^7.2.2",
     "multer": "^1.4.5-lts.1"
@@ -15,5 +14,8 @@
   "scripts": {
     "start": "node app.js",
     "watch": "nodemon --ext js,ejs --ignore public"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
   }
 }

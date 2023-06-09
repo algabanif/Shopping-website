@@ -23,85 +23,37 @@
  
     <!-- Header -->
     <nav class="header">
-      <div class="container-bar">
+        <div class="container-bar">
 
-          <a href="Home">
-          <img src="images/Logo1.png" style="height: 65px; ">
-          </a>
+            <!-- Logo -->
+            <a href="home"><img src="images/Logo1.png" style="height: 65px; "></a>
 
-          <div class="search-bar">
-              <input type="search" placeholder="Search">
-          </div>
+            <!-- Search bar -->
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search..." name="q">
+                <button type="submit"><img src="images/search.png"></button>
+            </div>
 
-          <div class="buttom">
-              <div class="container-login">
-              <a type="button" class="btn_login" data-toggle="modal" data-target="#loginModal">
-                  <img src="images/account-icon.png" style="padding-bottom: 4px;">
-              </a>
-              </div>
-              <a href="#">
-                  <p class="link"><img src="images/reg.png" style="padding-left: 10px;"></p>
-              </a>
-              <!-- <a href="#"><p class="link">AR</p></a> -->
-              <a href="cartEmpty"><button class="btn-cart"> <img src="images/cart-icon.png"> </button> </a>
-          </div>
+            <!-- Right side header-->
+            <div class="buttom">
 
-      </div>
-  </nav>
+                <!-- User profile -->
+                <div style="padding-right: 20px;">
+                    <a href="signUp"> <img src="images/account-icon.png" style="padding: 10px;"></a>
+                    
 
-  <!--login section-->
-  <section class="login-section">
-      <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                  <div class="modal-header border-bottom-0">
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">×</span>
-                      </button>
-                  </div>
-                  <div class="modal-body">
+                    <!-- Flags -->
+                    <a href="#"><img src="images/reg.png" style="padding: 10px;"></a>
 
-                      <div class="form-title text-center"> <h3>Login</h3> </div>
+                    <!-- Cart -->
+                    <a href="cartEmpty"><img src="images/cart-icon.png" style="padding: 10px;"></a>
+                </div>
+            </div>
 
-                      <div class="d-flex flex-column text-center">
-                          <form>
-                              <div class="form-group">
-                                  <input type="email" class="form-control m-1" id="email1" placeholder="Your email address...">
-                              </div>
-                              <div class="form-group">
-                                  <input type="password" class="form-control m-1" id="password1" placeholder="Your password...">
-                              </div>
-                              <button type="submit" id="signup" class="btn-login-submit mt-5 bg-black">Login</button>
-                          </form>
+        </div>
+    </nav>
 
-                          <div class="text-center text-muted delimiter">or use a social network</div>
-
-                          <div class="d-flex justify-content-center social-buttons">
-                              <button type="button" class="btn_login btn-secondary btn-login-round" data-toggle="tooltip" data-placement="top" title="Twitter">
-                                  <i class="fab fa-twitter"></i>
-                              </button>
-
-                              <button type="button" class="btn_login btn-secondary btn-login-round" data-toggle="tooltip" data-placement="top" title="Facebook">
-                                  <i class="fab fa-facebook"></i>
-                              </button>
-                              
-                              <button type="button" class="btn_login btn-secondary btn-login-round" data-toggle="tooltip" data-placement="top" title="Linkedin">
-                                  <i class="fab fa-linkedin"></i>
-                              </button>
-                          </div>
-                      </div>
-
-                  </div>
-                  
-                  <div class="modal-footer d-flex justify-content-center">
-                      <div class="signup-section">Not a member yet? <a href="#a" class="text-info"> Sign Up</a>.</div>
-                  </div>
-              </div>
-          </div>
-
-  </section>
-
-        <!-- category  -->
+    <!-- category  -->
     <section class="category ">
       <ul>
           <li>
@@ -123,7 +75,7 @@
           <li><a href="category">VIDEO GAMES</a></li>
           <li><a href="category">DIGITAL CARDS</a></li>
       </ul>
-  </section>
+    </section>
 
         <!-- Cart is Empty -->
         <div class="Empty-img">

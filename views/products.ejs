@@ -7,173 +7,267 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="AdminStyle.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
     <title>Products</title>
 
 </head>
 
 <body>
     <style>
+        
+        body{
+            font-family: 'Poppins', sans-serif;
+            background-color: #F6F8FA;
+            
+        }
+
         .product-list {
+            margin: 0 auto;
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
+            display: inline-block;
         }
-        
+
         .product {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin: 20px;
+            margin: 20px auto;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
-            max-width: 600px;
+            min-width: 500px;
+            max-width: 800px;
         }
-        
+
         .product-info {
             margin-bottom: 10px;
             text-align: center;
         }
-        
+
         .product-details {
             display: flex;
             flex-direction: column;
             text-align: center;
         }
-        
         .product-direction {
-            display: flex;
-            flex-direction: column;
-            /* text-align: center; */
+            height: 100%;
+            display: block;
+            text-align: center;
+            Overflow-x:scroll;
+            Overflow-y:scroll; 
         }
-        
+
         .product-details h4 {
             margin-bottom: 5px;
         }
-        
+
         .product-description {
             margin-top: 10px;
             text-align: center;
+            justify-content: center;
         }
-        
-        .product-image {
-            height: 5em;
+        .product-image{
+            height: 10em;
         }
-        
+
         .add-product {
-            background-color: #4CAF50;
+            background-color: #3a4c88;
             color: white;
             padding: 10px;
             border: none;
             cursor: pointer;
+            border-radius: 12px;
+            transition: all 0.8s ease;
+            font-size: medium;
+            margin-top: 30px; 
+            margin-left: 10px;
+            text-decoration: none; 
+            height: 40px; 
+            
             /* display: flex; */
             /* flex-direction: row; */
             /* justify-content: center;
             align-items: center; */
         }
-        
-        .button-center {
+
+        .add-product:hover{
+            background-color: #07143d;
+            color: white;
+        }
+
+        .button-center{
+            background-color: #7b84a5a2;
+            height: 100px;
             display: flex;
             justify-content: center
         }
+
+        .button-center input{
+            margin-top: 30px;
+            padding-left: 5px;
+            width: 500px;
+            height: 40px;
+            border-radius: 12px;
+            border: 1px solid;
+        }
+
+        .Back-btn{
+            text-decoration: none;
+            background-color: #3a4c88;
+            color: white;
+            margin-left: 10px;
+            margin-top: 30px; 
+            height: 40px;
+            padding: 10px;
+            font-size: medium;
+            border: none;
+            cursor: pointer;
+            border-radius: 12px;
+            transition: all 0.8s ease;
+        }
+
+        .Back-btn:hover{
+            background-color: #07143d;
+            color: white;
+        }
+
+        .logo-center{
+            display: flex;
+            justify-content: center
+        }
+
+        .logo-color{
+            color: #3a4c88!important;
+        }
+
     </style>
+
     <div class="button-center">
         <input type="text" id="search-input" placeholder="Search by product name or category">
+        <a class="add-product" href="/addproduct">Add Product</a>
+        <a class="Back-btn" href="Admin">Go back</a>
     </div>
+        
+        <div class="product-direction">
+            
+            <% if (Array.isArray(products) && products.length > 0) { %>
+                    <ul class="product-list">
+                    <% products.forEach(product => { %>
 
-    <div class="product-direction">
-        <% if (Array.isArray(products) && products.length > 0) { %>
-            <ul class="product-list">
-                <% products.forEach(product => { %>
-                    <li class="product">
-                        <div class="product-info">
-                            <h3>
-                                <%= product.productName %> (
-                                    <%= product.category %>)
-                            </h3>
-                        </div>
-                        <div>
-                            <img class="product-image" src="/uploads/<%= product.image %>" alt="Product Image">
-                        </div>
-                        <div class="product-description">
-                            <p>
-                                <%= product.description %>
-                            </p>
-                            <p>
-                                <%= product.status %>
-                            </p>
-                        </div>
-                        <div class="button-center">
-                            <a href="/edit-product/<%= product._id %>">
-                                <i class="fas fa-edit"></i>
-                                <!-- Font Awesome edit icon -->
-                            </a>
-                            <a href="#" class="delete-product" style="margin-left: 5px;" data-product-id="<%= product._id %>">
-                                <i class="fas fa-trash"></i>
-                                <!-- Font Awesome trash icon -->
-                            </a>
-                        </div>
-                    </li>
-                    <% }); %>
-            </ul>
-            <% } else { %>
-                <p class="mt-4">No products found.</p>
+
+
+                            <li class="product">
+
+                                <!-- Product name & des -->
+                                <div class="product-info">
+                                <h3>
+                                    <%= product.productName %> (<%= product.category %>)
+                                </h3>
+                                </div>
+
+                                <!-- Product img -->
+                                <div>
+                                    <img class="product-image" src="/uploads/<%= product.image %>" alt="Product Image">
+                                </div>
+
+                                <!-- Product state & des -->
+                                <div class="product-description">
+                                    <p>
+                                        <%= product.description %>
+                                    </p>
+                                    <p>
+                                        <%= product.status %>
+                                    </p>
+                                </div>
+
+                                <!-- Edit & Delet Product -->
+                                <div class="logo-center">
+                                    <a href="/edit-product/<%= product._id %>" class="logo-color">
+                                        <i class="fas fa-edit"></i> <!-- Font Awesome edit icon -->
+                                    </a>
+                                    <a href="#" class="delete-product logo-color" style="margin-left: 5px;" data-product-id="<%= product._id %>">
+                                        <i class="fas fa-trash"></i> <!-- Font Awesome trash icon -->
+                                    </a>
+                                </div>
+
+                            </li>
+                        <% }); %>
+
+
+
+                    </ul>
+                <% } else { %>
+                    <p class="mt-4">No products found.</p>
                 <% } %>
-                    <div class="button-center"><a class="add-product" href="/addproduct">Add Product</a></div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script>
-        // Function to handle delete product action
-        function deleteProduct(productId) {
-            axios.delete(`http://127.0.0.1:3004/product/deleteproduct/${productId}`, {
-                    headers: {
-                        Authorization: `Bearer ${localStorage.getItem('token')}`
-                    }
-                })
-                .then(response => {
-                    if (response.status == 200) {
-                        alert('Product deleted successfully')
-                    } else {
-                        console.log('Could not delete');
-                    }
-                })
-                .catch(error => {
-                    // Handle the error, e.g., display error message
-                    console.error('Error deleting product:', error);
-                    // Do any additional error handling as needed
-                });
-        }
 
-        // Add event listener to delete product icon click
-        const deleteIcons = document.querySelectorAll('.delete-product');
-        deleteIcons.forEach(deleteIcon => {
-            deleteIcon.addEventListener('click', (event) => {
-                event.preventDefault(); // Prevent the default link behavior
-                const productId = deleteIcon.getAttribute('data-product-id');
-                deleteProduct(productId);
+            <div class="button-center" style="padding-bottom: 300px;">
+                
+            </div>
+            
+        </div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+
+    // Function to handle delete product action
+    function deleteProduct(productId) {
+        axios.delete(`http://127.0.0.1:3004/product/deleteproduct/${productId}`, {
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem('token')}`
+            }
+        })
+            .then(response => {
+               if(response.status == 200){
+                alert('Product deleted successfully')
+               }
+               else{
+                console.log('Could not delete');
+               }
+            })
+            .catch(error => {
+                // Handle the error, e.g., display error message
+                console.error('Error deleting product:', error);
+                // Do any additional error handling as needed
             });
+    }
+
+    // Add event listener to delete product icon click
+    const deleteIcons = document.querySelectorAll('.delete-product');
+    deleteIcons.forEach(deleteIcon => {
+        deleteIcon.addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent the default link behavior
+            const productId = deleteIcon.getAttribute('data-product-id');
+            deleteProduct(productId);
         });
-        // Function to handle filtering products by name
-        function filterProductsByNameOrCategory() {
-            const searchInput = document.getElementById('search-input');
-            const filterValue = searchInput.value.toLowerCase();
-            const productItems = document.querySelectorAll('.product');
+    });
+   
+   
+    // Function to handle filtering products by name
+    function filterProductsByNameOrCategory() {
+    const searchInput = document.getElementById('search-input');
+    const filterValue = searchInput.value.toLowerCase();
+    const productItems = document.querySelectorAll('.product');
 
-            productItems.forEach((productItem) => {
-                const productName = productItem.querySelector('.product-info h3').textContent.toLowerCase();
-                if (productName.includes(filterValue)) {
-                    productItem.style.display = 'block';
-                } else {
-                    productItem.style.display = 'none';
-                }
-            });
+    productItems.forEach((productItem) => {
+        const productName = productItem.querySelector('.product-info h3').textContent.toLowerCase();
+        if (productName.includes(filterValue)) {
+            productItem.style.display = 'block';
+        } else {
+            productItem.style.display = 'none';
         }
+    });
+}
 
-        // Add event listener to search input
-        const searchInput = document.getElementById('search-input');
-        searchInput.addEventListener('input', filterProductsByNameOrCategory);
-    </script>
+// Add event listener to search input
+const searchInput = document.getElementById('search-input');
+searchInput.addEventListener('input', filterProductsByNameOrCategory);
+</script>
 
 </body>
 

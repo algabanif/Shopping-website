@@ -128,4 +128,3 @@ app.use((req, res) => { //Error link
 app.listen(port, () => {
         console.log(`Example app listening at http://127.0.0.1:${port}`)
     })
-    // 1st run this file then run DB

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,286 +11,291 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Online Shoping website </title>
 
-    <link rel="stylesheet" href="owl_carousel/owl.carousel.css">
-    <link rel="stylesheet" href="owl_carousel/owl.theme.default.css">
+    <link rel = "stylesheet" href = "owl_carousel/owl.carousel.css">
+    <link rel = "stylesheet" href = "owl_carousel/owl.theme.default.css">
 
 </head>
-
 <body>
 
-
+ 
     <!-- Header -->
     <nav class="header">
-        <div class="container-bar">
+      <div class="container-bar">
 
-            <a href="home">
-                <img src="img/Logo1.png" style="height: 65px; ">
-            </a>
+          <!-- Logo -->
+          <a href="home"><img src="images/Logo1.png" style="height: 65px; "></a>
 
-            <div class="search-bar">
-                <input type="search" placeholder="Search">
-            </div>
+          <!-- Search bar -->
+          <div class="search-bar">
+              <input type="text" id="search-input" placeholder="Search..." name="q">
+              <button type="submit"><img src="images/search.png"></button>
+          </div>
 
-            <div class="buttom">
-                <div class="container-login">
-                    <a type="button" class="btn_login" data-toggle="modal" data-target="#loginModal">
-                        <img src="img/account-icon.png" style="padding-bottom: 4px;">
-                    </a>
-                </div>
-                <a href="#">
-                    <p class="link"><img src="img/reg.png" style="padding-left: 10px;"></p>
-                </a>
-                <!-- <a href="#"><p class="link">AR</p></a> -->
-                <a href="cartEmpty"><button class="btn-cart"> <img src="img/cart-icon.png"> </button> </a>
-            </div>
+          <!-- Right side header-->
+          <div class="buttom">
 
-        </div>
+              <!-- User profile -->
+              <div style="padding-right: 20px;">
+                  <a href="signUp"><img src="images/account-icon.png" style="padding: 10px;"></a>
+                  
+                  <!-- Flags -->
+                  <a href="#"><img src="images/reg.png" style="padding: 10px;"></a>
+
+                  <!-- Cart -->
+                  <a href="cartEmpty"><img src="images/cart-icon.png" style="padding: 10px;"></a>
+              </div>
+          </div>
+
+      </div>
     </nav>
 
     <!-- category  -->
     <section class="category ">
-        <ul>
-            <li>
-                <a href="#">Categorys ▼</a>
-                <ul class="dropdown">
-                    <li><a href="category">CPU</a></li>
-                    <li><a href="category">GPU</a></li>
-                    <li><a href="category">COOLERS</a></li>
-                    <li><a href="category">STORAGE</a></li>
-                    <li><a href="category">PowerSupply</a></li>
-                    <li><a href="category">MotherBoards</a></li>
-                </ul>
-            </li>
-            <li><a href="category">COMPUTER</a></li>
-            <li><a href="category">COMPUTER ACCESSORIES</a></li>
-            <li><a href="category">MONITORS</a></li>
-            <li><a href="category">OFFICE & NETWORKING</a></li>
-            <li><a href="category">SMART PHONES & TABLET</a></li>
-            <li><a href="category">VIDEO GAMES</a></li>
-            <li><a href="category">DIGITAL CARDS</a></li>
-        </ul>
+      <ul>
+          <li>
+              <a href="#">Categorys ▼</a>
+              <ul class="dropdown">
+                  <li><a href="category">CPU</a></li>
+                  <li><a href="category">GPU</a></li>
+                  <li><a href="category">COOLERS</a></li>
+                  <li><a href="category">STORAGE</a></li>
+                  <li><a href="category">PowerSupply</a></li>
+                  <li><a href="category">MotherBoards</a></li>
+              </ul>
+          </li>
+          <li><a href="category">COMPUTER</a></li>
+          <li><a href="category">COMPUTER ACCESSORIES</a></li>
+          <li><a href="category">MONITORS</a></li>
+          <li><a href="category">OFFICE & NETWORKING</a></li>
+          <li><a href="category">SMART PHONES & TABLET</a></li>
+          <li><a href="category">VIDEO GAMES</a></li>
+          <li><a href="category">DIGITAL CARDS</a></li>
+      </ul>
     </section>
 
     <!-- Cart is Empty -->
     <div class="signUp-In">
-        <div class="container">
-            <input type="checkbox" id="flip">
-            <div class="cover">
-                <div class="front">
-                    <img src="images/PC-PARTS.png" alt="">
-                    <div class="text">
-                        <span class="text-1">Every new friend is a <br> new adventure</span>
-                        <span class="text-2">Let's get connected</span>
-                    </div>
-                </div>
-                <div class="back">
-                    <!--<img class="backImg" src="images/backImg.jpg" alt="">-->
-                    <div class="text">
-                        <span class="text-1">Complete miles of journey <br> with one step</span>
-                        <span class="text-2">Let's get started</span>
-                    </div>
-                </div>
+    <div class="container">
+        <input type="checkbox" id="flip">
+        <div class="cover">
+          <div class="front">
+            <img src="images/PC-PARTS.png" alt="">
+            <div class="text">
+              <span class="text-1">Every new friend is a <br> new adventure</span>
+              <span class="text-2">Let's get connected</span>
             </div>
-            <div class="forms">
-                <div class="form-content">
-                    <div class="login-form">
-                        <div class="title">Login</div>
-                        <form id="login-form">
-                            <div class="input-boxes">
-                                <div class="input-box">
-                                    <i class="fas fa-envelope"></i>
-                                    <input type="text" id="loginemailInput" placeholder="Enter your email" required>
-                                </div>
-                                <div class="input-box">
-                                    <i class="fas fa-lock"></i>
-                                    <input type="password" id="loginpasswordInput" placeholder="Enter your password" required>
-                                </div>
-                                <div class="text"><a href="#">Forgot password?</a></div>
-                                <div class="button input-box">
-                                    <input type="submit" value="Submit" id="submitButton">
-                                </div>
-                                <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup now</label></div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="signup-form">
-                        <div class="title">Signup</div>
-                        <form id="addForm" action="#">
-                            <div class="input-boxes">
-                                <div class="input-box">
-                                    <i class="fas fa-user"></i>
-                                    <input type="text" id="nameInput" placeholder="Enter your name" required>
-                                </div>
-                                <div class="input-box">
-                                    <i class="fas fa-envelope"></i>
-                                    <input type="email" id="emailInput" placeholder="Enter your email" required>
-                                </div>
-                                <div class="input-box">
-                                    <i class="fas fa-lock"></i>
-                                    <input type="password" id="passwordInput" placeholder="Enter your password" required>
-                                </div>
-                                <div class="button input-box">
-                                    <input type="submit" value="Submit" id="submitButton">
-                                </div>
-                                <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+          </div>
+          <div class="back">
+            <!--<img class="backImg" src="images/backImg.jpg" alt="">-->
+            <div class="text">
+              <span class="text-1">Complete miles of journey <br> with one step</span>
+              <span class="text-2">Let's get started</span>
             </div>
+          </div>
         </div>
+        <div class="forms">
+            <div class="form-content">
+              <div class="login-form">
+                <div class="title">Login</div>
+              <form id="login-form">
+                <div class="input-boxes">
+                  <div class="input-box">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" id="loginemailInput" placeholder="Enter your email" required>
+                  </div>
+                  <div class="input-box">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="loginpasswordInput" placeholder="Enter your password" required>
+                  </div>
+                  <div class="text"><a href="#">Forgot password?</a></div>
+                  <div class="button input-box">
+                    <input type="submit" value="Submit" id="submitButton">
+                  </div>
+                  <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup now</label></div>
+                </div>
+            </form>
+          </div>
+            <div class="signup-form">
+              <div class="title">Signup</div>
+              <form id="addForm" action="#">
+                <div class="input-boxes">
+                  <div class="input-box">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="nameInput" placeholder="Enter your name" required>
+                  </div>
+                  <div class="input-box">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="emailInput" placeholder="Enter your email" required>
+                  </div>
+                  <div class="input-box">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="passwordInput" placeholder="Enter your password" required>
+                  </div>
+                  <div class="button input-box">
+                    <input type="submit" value="Submit" id="submitButton">
+                  </div>
+                  <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
+                </div>
+              </form>
+        </div>
+        </div>
+        </div>
+      </div>
     </div>
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-container">
+          <div class="footer-container">
             <div class="footer-row">
 
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="#">about us</a></li>
-                        <li><a href="#">our services</a></li>
-                        <li><a href="#">privacy policy</a></li>
-                        <li><a href="#">affiliate program</a></li>
-                    </ul>
-                </div>
+              <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                  <li><a href="#">about us</a></li>
+                  <li><a href="#">our services</a></li>
+                  <li><a href="#">privacy policy</a></li>
+                  <li><a href="#">affiliate program</a></li>
+                </ul>
+              </div>
 
-                <div class="footer-col">
-                    <h4>get help</h4>
-                    <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">shipping</a></li>
-                        <li><a href="#">returns</a></li>
-                        <li><a href="#">order status</a></li>
-                        <li><a href="#">payment options</a></li>
-                    </ul>
-                </div>
+              <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">shipping</a></li>
+                  <li><a href="#">returns</a></li>
+                  <li><a href="#">order status</a></li>
+                  <li><a href="#">payment options</a></li>
+                </ul>
+              </div>
 
-                <div class="footer-col">
-                    <h4>online shop</h4>
-                    <ul>
-                        <li><a href="#">Apple</a></li>
-                        <li><a href="#">SAMSUNG</a></li>
-                        <li><a href="#">SONY</a></li>
-                        <li><a href="#">GOOGLE</a></li>
-                    </ul>
-                </div>
+              <div class="footer-col">
+                <h4>online shop</h4>
+                <ul>
+                  <li><a href="#">Apple</a></li>
+                  <li><a href="#">SAMSUNG</a></li>
+                  <li><a href="#">SONY</a></li>
+                  <li><a href="#">GOOGLE</a></li>
+                </ul>
+              </div>
 
-                <div class="footer-col">
-                    <h4>follow us</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+              <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
+              </div>
             </div>
-        </div>
+          </div>
     </footer>
 
 
-    <script src="cartEmpty.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script>
-        // Function to handle form submission
-        function handleSignup(event) {
-            event.preventDefault(); // Prevent the default form submission
+        <script src="cartEmpty.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+  // Function to handle form submission
+  function handleSignup(event) {
+    event.preventDefault(); // Prevent the default form submission
 
-            // Get the form data
-            const name = document.getElementById('nameInput').value;
-            const email = document.getElementById('emailInput').value;
-            const password = document.getElementById('passwordInput').value;
+    // Get the form data
+    const name = document.getElementById('nameInput').value;
+    const email = document.getElementById('emailInput').value;
+    const password = document.getElementById('passwordInput').value;
 
-            // Create an object with the form data
-            const formData = {
-                name: name,
-                email: email,
-                password: password
-            };
+    // Create an object with the form data
+    const formData = {
+      name: name,
+      email: email,
+      password: password
+    };
 
-            // Perform the API request using Axios
-            axios.post('http://127.0.0.1:3004/user/signup', formData)
-                .then(response => {
-                    // Handle the response, e.g., display success message
-                    if (response.status == 200) {
-                        alert("Signup successfull")
-                    } else {
-                        if (response.status == 202) {
-                            alert("Email Already Exist")
-                        } else {
-                            alert("Something went wrong")
-                        }
-                    }
-                    // console.log('Form submitted successfully');
-                    // Do any additional processing or page navigation as needed
-                })
-                .catch(error => {
-                    // Handle the error, e.g., display error message
-                    console.error('Error submitting form:', error);
-                    // Do any additional error handling as needed
-                });
+    // Perform the API request using Axios
+    axios.post('http://127.0.0.1:3004/user/signup', formData)
+      .then(response => {
+        // Handle the response, e.g., display success message
+        if(response.status == 200){
+          alert("Signup successfull")
         }
-
-        function handleLogin(event) {
-            event.preventDefault(); // Prevent the default form submission
-
-            // Get the form data
-            const email = document.getElementById('loginemailInput').value;
-            const password = document.getElementById('loginpasswordInput').value;
-
-            // Create an object with the form data
-            const formData = {
-                email: email,
-                password: password
-            };
-
-            // Perform the API request using Axios
-            axios.post('http://127.0.0.1:3004/user/login', formData)
-                .then(response => {
-                    // Handle the response, e.g., display success message
-                    if (response.status == 200) {
-                        localStorage.setItem('token', response.data.data.token)
-                        if (response.data.data.is_admin) {
-                            window.location.href = '/Admin';
-                        } else {
-                            window.location.href = '/home';
-                        }
-
-                        alert("Login successfull")
-                    } else {
-                        if (response.status == 202) {
-                            alert("Email does not exist")
-                        } else {
-                            if (response.status == 205) {
-                                alert("Incorrect Password")
-                            } else {
-                                alert("Something went wrong")
-                            }
-                        }
-                    }
-                    // console.log('Form submitted successfully');
-                    // Do any additional processing or page navigation as needed
-                })
-                .catch(error => {
-                    // Handle the error, e.g., display error message
-                    console.error('Error submitting form:', error);
-                    // Do any additional error handling as needed
-                });
+        else{
+          if(response.status == 202){
+          alert("Email Already Exist")
         }
-        // Add event listener to form submission
-        const form = document.getElementById('addForm');
-        form.addEventListener('submit', handleSignup);
+        else{
+          alert("Something went wrong")
+        }
+        }
+        // console.log('Form submitted successfully');
+        // Do any additional processing or page navigation as needed
+      })
+      .catch(error => {
+        // Handle the error, e.g., display error message
+        console.error('Error submitting form:', error);
+        // Do any additional error handling as needed
+      });
+  }
+  function handleLogin(event) {
+    event.preventDefault(); // Prevent the default form submission
 
-        const loginform = document.getElementById('login-form'); // Corrected ID
+    // Get the form data
+    const email = document.getElementById('loginemailInput').value;
+    const password = document.getElementById('loginpasswordInput').value;
 
-        loginform.addEventListener('submit', handleLogin);
-    </script>
+    // Create an object with the form data
+    const formData = {
+      email: email,
+      password: password
+    };
+
+    // Perform the API request using Axios
+    axios.post('http://127.0.0.1:3004/user/login', formData)
+      .then(response => {
+        // Handle the response, e.g., display success message
+        if(response.status == 200){
+          localStorage.setItem('token',response.data.data.token)
+          if(response.data.data.is_admin){
+            window.location.href = '/Admin';
+          }
+          else{
+            window.location.href = '/home';
+          }
+          
+          alert("Login successfull")
+        }
+        else{
+          if(response.status == 202){
+          alert("Email does not exist")
+        }
+        else{
+          if(response.status == 205){
+          alert("Incorrect Password")
+        }
+        else{
+          alert("Something went wrong")
+        }
+        }
+        }
+        // console.log('Form submitted successfully');
+        // Do any additional processing or page navigation as needed
+      })
+      .catch(error => {
+        // Handle the error, e.g., display error message
+        console.error('Error submitting form:', error);
+        // Do any additional error handling as needed
+      });
+  }
+  // Add event listener to form submission
+  const form = document.getElementById('addForm');
+  form.addEventListener('submit', handleSignup);
+ 
+  const loginform = document.getElementById('login-form'); // Corrected ID
+
+loginform.addEventListener('submit', handleLogin);
+</script>
 
 </body>
-
 </html>

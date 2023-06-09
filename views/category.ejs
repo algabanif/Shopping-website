@@ -41,26 +41,29 @@
     <nav class="header">
         <div class="container-bar">
 
-            <a href="home">
-            <img src="images/Logo1.png" style="height: 65px; ">
-            </a>
+            <!-- Logo -->
+            <a href="home"><img src="images/Logo1.png" style="height: 65px; "></a>
 
-            
+            <!-- Search bar -->
             <div class="search-bar">
-                <input type="search" placeholder="Search">
+                <input type="text" id="search-input" placeholder="Search..." name="q">
+                <button type="submit"><img src="images/search.png"></button>
             </div>
 
+            <!-- Right side header-->
             <div class="buttom">
-                <div class="container-login">
-                <a type="button" class="btn_login" data-toggle="modal" data-target="#loginModal">
-                    <img src="images/account-icon.png" style="padding-bottom: 4px;">
-                </a>
+
+                <!-- User profile -->
+                <div style="padding-right: 20px;">
+                    <a href="signUp"> <img src="images/account-icon.png" style="padding: 10px;"></a>
+                    
+
+                    <!-- Flags -->
+                    <a href="#"><img src="images/reg.png" style="padding: 10px;"></a>
+
+                    <!-- Cart -->
+                    <a href="cartEmpty"><img src="images/cart-icon.png" style="padding: 10px;"></a>
                 </div>
-                <a href="#">
-                    <p class="link"><img src="images/reg.png" style="padding-left: 10px;"></p>
-                </a>
-                <!-- <a href="#"><p class="link">AR</p></a> -->
-                <a href="cartEmpty"><button class="btn-cart"> <img src="images/cart-icon.png"> </button> </a>
             </div>
 
         </div>
