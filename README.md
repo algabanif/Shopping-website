@@ -1,4 +1,4 @@
-# Path-Planning
+# Shopping website
 Path Planning is a fundamental problem in robotics. It aims to find an optimal <br />
 free-obstacle path for a robot from a starting position to a given destination
 
