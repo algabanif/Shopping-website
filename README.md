@@ -13,10 +13,23 @@ provide a one-stop-shop for customers to purchase a wide range of tech products.
 • Establish Backend by using Node and express <br/>
 • Store data in a MongoDB <br/>
 
+# And This some capture for out website
 
-# Home page
-<img src="/public/images/Homepage.png">
+## Home page
+<img src="/public/images/Homepage.png" style="width: 600px;"><br/><br/><br/><br/>
 
+## Login page
+<img src="/public/images/loginpage.png"  style="width: 600px;"><br/><br/><br/><br/>
 
-# Admin page
-<img src="/public/images/Adminpage.png">
+## Admin page
+<img src="/public/images/Adminpage.png" style="width: 600px;"><br/><br/><br/><br/>
+
+## Products page
+<img src="/public/images/allproducts.png" style="width: 600px;"><br/><br/><br/><br/>
+
+## Add new product and edit page
+<img src="/public/images/AddProduct.png" style="width: 600px;"><br/><br/><br/><br/>
+
+## Search page
+<img src="/public/images/searchproduct.png" style="width: 600px;"><br/><br/><br/><br/>
+
