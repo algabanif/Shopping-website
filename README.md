@@ -13,3 +13,10 @@ provide a one-stop-shop for customers to purchase a wide range of tech products.
 • Establish Backend by using Node and express <br/>
 • Store data in a MongoDB <br/>
 
+
+# Home page
+<img src="/public/images/Homepage.png">
+
+
+# Admin page
+<img src="/public/images/Adminpage.png">
