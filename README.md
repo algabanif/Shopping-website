@@ -1,9 +1,3 @@
-## Team members
-• Faisal Algabani - 440017581 <br/>
-• Saleh Alballa - 441017617 <br/>
-• Abdulaziz Alzaagi - 439017121
-<br/><br/><br/><br/>
-
 
 ## Shopping website
 Our shopping website is for computers hardware and software, office parts, and games would be a one-stop-shop for
